@@ -1,12 +1,15 @@
+{% load static %}
+
 <html>
     <head>
         <title>DailyNotes</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
     </head>
     <body>
         <h2>Welcome to DailyNotes!</h2>
         <hr />
         <h3>Add a new note :</h3>
-        <form method="post">
+        <form id="note-form" method="post">
             {% csrf_token %}
             {{ myForm.as_p }}
             <button type="submit">Add note</button>
@@ -25,4 +28,6 @@
             <p>No notes.</p>
         {% endif %}
     </body>
+
+    <script src="{% static 'js/app.js' %}"></script>
 </html>
