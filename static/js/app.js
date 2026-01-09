@@ -1,4 +1,4 @@
-document.getElementById('note-form').onsubmit = function(event){
+document.getElementById('note-form').onsubmit = function (event) {
 
     event.preventDefault();
 
